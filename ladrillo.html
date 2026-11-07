@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+    <title>Ladrillo Structural Supply | Facades, Cladding & Turnkey Installation</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        terracotta: {
+                            50: '#fdf4f2',
+                            100: '#fbe7e4',
+                            500: '#b8332a',
+                            600: '#9e251e',
+                            700: '#831e17'
+                        },
+                        stonecharcoal: {
+                            800: '#1e2227',
+                            900: '#14171b',
+                            950: '#0c0e11'
+                        },
+                        architect: {
+                            slate: '#64748b',
+                            light: '#f8fafc',
+                            border: '#334155'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Cinzel"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome for Architectural & UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .glass-panel {
+            background: rgba(20, 23, 27, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-pattern {
+            background-color: #0c0e11;
+            background-image: radial-gradient(rgba(184, 51, 42, 0.15) 1px, transparent 0);
+            background-size: 28px 28px;
+        }
+                .text-gradient {
+            background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #d94336 0%, #9e251e 100%);
+        }
+    </style>
+</head>
+<body class="bg-stonecharcoal-950 text-slate-200 font-sans antialiased selection:bg-terracotta-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-stonecharcoal-900 border-b border-white/5 py-2 px-4 text-xs tracking-wider uppercase text-slate-400">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Commercial Tier Material Sourcing & Turnkey On-Site Execution</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <span class="hidden md:inline"><i class="fa-solid fa-location-dot text-terracotta-500 mr-1.5"></i>Trivandrum & Pan-Kerala Supply</span>
+                <a href="tel:+919746133395" class="hover:text-terracotta-500 transition-colors"><i class="fa-solid fa-phone mr-1.5"></i>+91 97461 33395</a>
+                <a href="mailto:gm@derziegel.co.in" class="hover:text-terracotta-500 transition-colors hidden sm:inline"><i class="fa-solid fa-envelope mr-1.5"></i>gm@derziegel.co.in</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo.jpeg" alt="Ladrillo logo" class="w-10 h-10 rounded object-cover shadow-lg shadow-terracotta-500/25 group-hover:scale-105 transition-transform">
+                <div>
+                    <span class="font-display font-bold text-xl tracking-wider text-white block leading-tight">LADRILLO</span>
+                    <span class="text-[10px] tracking-[0.25em] text-slate-400 font-medium block uppercase">Structural Supply</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-10 lg:ml-10 text-sm font-medium text-slate-300">
+                <a href="#positioning" class="hover:text-white transition-colors">The Advantages</a>
+                <a href="#materials" class="hover:text-white transition-colors">Material Systems</a>
+                <a href="#calculator" class="hover:text-white transition-colors">Project Estimator</a>
+                <a href="#process" class="hover:text-white transition-colors">Execution Workflow</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact & BOQ</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="#calculator" class="text-xs uppercase tracking-wider font-semibold py-2.5 px-4 rounded border border-white/20 hover:border-terracotta-500 text-slate-300 hover:text-white transition-colors">
+                    Calculate Cost
+                </a>
+                <a href="#contact" class="accent-gradient hover:opacity-95 text-white text-xs uppercase tracking-wider font-semibold py-2.5 px-5 rounded shadow-md shadow-terracotta-500/20 transition-all transform active:scale-95">
+                    Request Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="lg:hidden text-slate-400 hover:text-white p-2" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileDrawer" class="hidden lg:hidden bg-stonecharcoal-900 border-b border-white/10 px-6 py-6 space-y-4">
+            <a href="#positioning" class="block text-slate-300 hover:text-white font-medium py-1">The Advantages</a>
+            <a href="#materials" class="block text-slate-300 hover:text-white font-medium py-1">Material Systems</a>
+            <a href="#calculator" class="block text-slate-300 hover:text-white font-medium py-1">Project Estimator</a>
+            <a href="#process" class="block text-slate-300 hover:text-white font-medium py-1">Execution Workflow</a>
+            <a href="#contact" class="block text-slate-300 hover:text-white font-medium py-1">Contact & BOQ</a>
+            <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+                <a href="#calculator" class="text-center py-2.5 border border-white/20 text-slate-300 rounded font-semibold text-xs tracking-wider uppercase">Calculate Cost</a>
+                <a href="#contact" class="text-center py-2.5 bg-terracotta-500 text-white rounded font-semibold text-xs tracking-wider uppercase">Request Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative hero-pattern pt-16 pb-24 md:pt-28 md:pb-36 border-b border-white/10 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-stonecharcoal-950 via-transparent to-transparent pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-terracotta-500/30 bg-terracotta-500/10 text-terracotta-100 text-xs tracking-wider uppercase font-semibold">
+                            <i class="fa-solid fa-shapes text-terracotta-500"></i> Turnkey Supply & Precision Execution Partner
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+                            End-to-End <span class="text-terracotta-500">Facade Engineering</span> & Structural Supply.
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-400 font-light max-w-2xl leading-relaxed">
+                            We bridge leading manufacturing quarries and architects. Procure curated natural stone, wirecut facing bricks, and ventilated facade systems at volume rates—fully backed by our master on-site anchoring, dry-cladding, and craftsmanship.
+                        </p>
+
+                        <!-- Key Value Bullets -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2 pb-4 text-xs font-medium text-slate-300">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-shield-halved text-terracotta-500 text-sm"></i>
+                                <span>Zero-Transit Loss Guarantee</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-compass-drafting text-terracotta-500 text-sm"></i>
+                                <span>Dry & Wet Clad Engineering</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-cubes-stacked text-terracotta-500 text-sm"></i>
+                                <span>Quarry-Direct Cost Advantage</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA row -->
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <a href="#materials" class="accent-gradient text-white px-7 py-3.5 rounded font-semibold text-sm uppercase tracking-wider shadow-lg shadow-terracotta-500/30 hover:scale-[1.02] transition-transform">
+                                Explore Material Systems
+                            </a>
+                            <a href="#calculator" class="bg-stonecharcoal-900 border border-white/20 hover:border-slate-400 text-white px-7 py-3.5 rounded font-semibold text-sm uppercase tracking-wider transition-all">
+                                Cost Estimator <i class="fa-solid fa-calculator ml-2 text-terracotta-500"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Graphic / Quick Stats Card -->
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-terracotta-500 to-amber-700 opacity-20 blur-xl"></div>
+                            <div class="relative glass-panel rounded-2xl p-6 sm:p-8 space-y-6">
+                                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                    <div>
+                                        <p class="text-xs text-slate-400 uppercase tracking-widest">Enterprise Profile</p>
+                                        <h3 class="text-lg font-bold text-white">Ladrillo Supply & Fit Spec</h3>
+                                    </div>
+                                    <span class="px-2.5 py-1 text-[11px] rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">PAN-KERALA READY</span>
+                                </div>
+
+                                <!-- Architectural Spec Blocks -->
+                                <div class="space-y-4">
+                                    <div class="p-3.5 rounded-lg bg-stonecharcoal-900/80 border border-white/5 flex items-center justify-between">
+                                        <div>
+                                            <p class="text-xs font-semibold text-slate-300">Surface Pitch Black Granite</p>
+                                            <p class="text-[11px] text-slate-400">Hand-chiseled • 20–30mm Calibration</p>
+                                        </div>
+                                        <span class="text-xs font-mono text-terracotta-500 font-bold">100% In-House Fit</span>
+                                    </div>
+
+                                    <div class="p-3.5 rounded-lg bg-stonecharcoal-900/80 border border-white/5 flex items-center justify-between">
+                                        <div>
+                                            <p class="text-xs font-semibold text-slate-300">Wirecut Facing & Paver Bricks</p>
+                                            <p class="text-[11px] text-slate-400">High compressive load • Chamfered edge</p>
+                                        </div>
+                                        <span class="text-xs font-mono text-terracotta-500 font-bold">Factory Sourced</span>
+                                    </div>
+
+                                    <div class="p-3.5 rounded-lg bg-stonecharcoal-900/80 border border-white/5 flex items-center justify-between">
+                                        <div>
+                                            <p class="text-xs font-semibold text-slate-300">Ventilated Terracotta Cladding</p>
+                                            <p class="text-[11px] text-slate-400">Aluminum substructure • SS 304 clips</p>
+                                        </div>
+                                        <span class="text-xs font-mono text-terracotta-500 font-bold">Engineered Dry-Fix</span>
+                                    </div>
+                                </div>
+
+                                <!-- Metric Counters -->
+                                <div class="grid grid-cols-3 gap-2 pt-2 border-t border-white/10 text-center">
+                                    <div>
+                                        <p class="text-xl font-bold text-white">50k+</p>
+                                        <p class="text-[10px] text-slate-400 uppercase">Sq.Ft Executed</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xl font-bold text-white">100%</p>
+                                        <p class="text-[10px] text-slate-400 uppercase">Batch Matched</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xl font-bold text-white">Zero</p>
+                                        <p class="text-[10px] text-slate-400 uppercase">Client Breakage</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- POSITIONING: THE LADRILLO ADVANTAGE -->
+        <section id="positioning" class="py-24 bg-stonecharcoal-900 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <span class="text-xs font-bold text-terracotta-500 tracking-widest uppercase">The Hybrid Turnkey Model</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Why Architects & Developers Partner With Us</h2>
+                    <p class="text-sm sm:text-base text-slate-400">
+                        Buying materials directly from quarries creates logistics chaos and quality discrepancies; hiring independent masons risks poor facade alignment. Ladrillo consolidates both into a single accountable partnership.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="p-8 rounded-xl bg-stonecharcoal-950 border border-white/10 hover:border-terracotta-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-lg bg-terracotta-500/10 flex items-center justify-center text-terracotta-500 text-xl mb-6 group-hover:bg-terracotta-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Direct-Tier Sourcing</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            We leverage bulk commercial purchasing relationships with granite quarries, clay brick factories, and tile plants. You receive wholesale rates without dealing with manufacturer minimum order barriers or freight complexities.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-8 rounded-xl bg-stonecharcoal-950 border border-white/10 hover:border-terracotta-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-lg bg-terracotta-500/10 flex items-center justify-center text-terracotta-500 text-xl mb-6 group-hover:bg-terracotta-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Certified Installation Crews</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            We do not simply dump stones at your site. Our specialized installation division executes the work using chemical adhesives, mechanical stainless-steel cramps, expansion joints, and laser levels for perfect alignment.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-8 rounded-xl bg-stonecharcoal-950 border border-white/10 hover:border-terracotta-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-lg bg-terracotta-500/10 flex items-center justify-center text-terracotta-500 text-xl mb-6 group-hover:bg-terracotta-500 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-3">Single-Point Accountability</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            No pointing fingers between material vendors and installation labor. From crate inspection and moisture testing to post-installation silicon sealant and protective coats, we own the finish 100%.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- MATERIAL CATALOGUE & SYSTEMS -->
+        <section id="materials" class="py-24 bg-stonecharcoal-950 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <span class="text-xs font-bold text-terracotta-500 tracking-widest uppercase">System Specifications</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mt-1">Curated Materials & Cladding Systems</h2>
+                        <p class="text-sm text-slate-400 mt-2">Every surface profile is calibrated for thickness, structural stability, and weather endurance.</p>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                        <button class="filter-btn active px-4 py-2 rounded bg-terracotta-500 text-white" data-filter="all">All Systems</button>
+                        <button class="filter-btn px-4 py-2 rounded bg-stonecharcoal-900 border border-white/10 text-slate-300 hover:text-white" data-filter="stone">Natural Stone</button>
+                        <button class="filter-btn px-4 py-2 rounded bg-stonecharcoal-900 border border-white/10 text-slate-300 hover:text-white" data-filter="brick">Clay & Facing Bricks</button>
+                        <button class="filter-btn px-4 py-2 rounded bg-stonecharcoal-900 border border-white/10 text-slate-300 hover:text-white" data-filter="dryclad">Dry-Clad & Substructure</button>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="productsGrid">
+                    
+                    <!-- Item 1: Granite -->
+                    <div class="product-card stone rounded-xl bg-stonecharcoal-900 border border-white/10 overflow-hidden flex flex-col justify-between hover:border-slate-500 transition-all">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[10px] font-mono uppercase bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Natural Stone</span>
+                                <span class="text-xs text-terracotta-500 font-bold">Standard Spec</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-1">Pitched Black Granite</h3>
+                            <p class="text-xs text-slate-400 mb-4">Deep rustic cleft finish with light light-absorbing natural facets. High load tolerance.</p>
+                            
+                            <div class="space-y-2 text-xs border-t border-white/10 pt-4">
+                                <div class="flex justify-between"><span class="text-slate-400">Dimensions:</span> <span class="text-slate-200 font-mono">300 × 150 mm</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Thickness:</span> <span class="text-slate-200 font-mono">20 - 30 mm</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Finish:</span> <span class="text-slate-200">Surface Pitched</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Installation:</span> <span class="text-slate-200">Adhesive / Mechanical</span></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-stonecharcoal-950/80 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-300">₹240 <span class="text-[10px] font-normal text-slate-400">/ sq.ft (Mat.)</span></span>
+                            <button onclick="prefillEstimate('Pitched Black Granite', 240)" class="text-xs text-terracotta-500 hover:text-terracotta-100 font-semibold flex items-center gap-1">
+                                Estimate <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Wirecut Brick Tiles -->
+                    <div class="product-card brick rounded-xl bg-stonecharcoal-900 border border-white/10 overflow-hidden flex flex-col justify-between hover:border-slate-500 transition-all">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[10px] font-mono uppercase bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Clay Ceramic</span>
+                                <span class="text-xs text-terracotta-500 font-bold">Best Seller</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-1">Wirecut Terracotta Tile</h3>
+                            <p class="text-xs text-slate-400 mb-4">Kiln-fired natural clay bricks with defined sharp edges and uniform thermal resistance.</p>
+                            
+                            <div class="space-y-2 text-xs border-t border-white/10 pt-4">
+                                <div class="flex justify-between"><span class="text-slate-400">Dimensions:</span> <span class="text-slate-200 font-mono">230 × 75 mm (9×3")</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Thickness:</span> <span class="text-slate-200 font-mono">18 mm Nominal</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Finish:</span> <span class="text-slate-200">Natural Raw Matt</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Installation:</span> <span class="text-slate-200">Polymer Modified Mortar</span></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-stonecharcoal-950/80 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-300">₹85 <span class="text-[10px] font-normal text-slate-400">/ sq.ft (Mat.)</span></span>
+                            <button onclick="prefillEstimate('Wirecut Terracotta Tile', 85)" class="text-xs text-terracotta-500 hover:text-terracotta-100 font-semibold flex items-center gap-1">
+                                Estimate <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Split Sandstone -->
+                    <div class="product-card stone rounded-xl bg-stonecharcoal-900 border border-white/10 overflow-hidden flex flex-col justify-between hover:border-slate-500 transition-all">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[10px] font-mono uppercase bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Natural Stone</span>
+                                <span class="text-xs text-terracotta-500 font-bold">Exterior Accent</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-1">Split-Face Sandstone</h3>
+                            <p class="text-xs text-slate-400 mb-4">Earthy stratified rock texture. Ideal for compound walls, boundary pillars, and feature facades.</p>
+                            
+                            <div class="space-y-2 text-xs border-t border-white/10 pt-4">
+                                <div class="flex justify-between"><span class="text-slate-400">Dimensions:</span> <span class="text-slate-200 font-mono">600 × 150 mm</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Thickness:</span> <span class="text-slate-200 font-mono">20 - 25 mm</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Finish:</span> <span class="text-slate-200">Chiseled Split Face</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Installation:</span> <span class="text-slate-200">Wet Clad with Pins</span></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-stonecharcoal-950/80 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-300">₹125 <span class="text-[10px] font-normal text-slate-400">/ sq.ft (Mat.)</span></span>
+                            <button onclick="prefillEstimate('Split-Face Sandstone', 125)" class="text-xs text-terracotta-500 hover:text-terracotta-100 font-semibold flex items-center gap-1">
+                                Estimate <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Dry-Clad Terracotta Louvers -->
+                    <div class="product-card dryclad rounded-xl bg-stonecharcoal-900 border border-white/10 overflow-hidden flex flex-col justify-between hover:border-slate-500 transition-all">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[10px] font-mono uppercase bg-slate-800 text-slate-300 px-2 py-0.5 rounded">Ventilated Dry-Clad</span>
+                                <span class="text-xs text-terracotta-500 font-bold">Architectural Grade</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-1">Terracotta Louver Baguettes</h3>
+                            <p class="text-xs text-slate-400 mb-4">Sun-shading and solar heat gain dissipation. Hollow core extruded terracotta with internal steel core.</p>
+                            
+                            <div class="space-y-2 text-xs border-t border-white/10 pt-4">
+                                <div class="flex justify-between"><span class="text-slate-400">Profile:</span> <span class="text-slate-200 font-mono">50 × 50 / 60 × 60 mm</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Length:</span> <span class="text-slate-200 font-mono">Up to 1200 mm</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">Finish:</span> <span class="text-slate-200">Terracotta Natural Red</span></div>
+                                <div class="flex justify-between"><span class="text-slate-400">System:</span> <span class="text-slate-200">Dry Clad (SS304 Brackets)</span></div>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-stonecharcoal-950/80 border-t border-white/10 flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-300">₹320 <span class="text-[10px] font-normal text-slate-400">/ Rft (System)</span></span>
+                            <button onclick="prefillEstimate('Terracotta Louver Baguettes', 320)" class="text-xs text-terracotta-500 hover:text-terracotta-100 font-semibold flex items-center gap-1">
+                                Estimate <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTERACTIVE COST & PROJECT ESTIMATION CALCULATOR -->
+        <section id="calculator" class="py-24 bg-stonecharcoal-900 border-b border-white/10">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-terracotta-500 tracking-widest uppercase">Project Cost Estimation Engine</span>
+                    <h2 class="text-3xl font-bold text-white tracking-tight mt-1">Estimate Supply & Turnkey Installation</h2>
+                    <p class="text-sm text-slate-400 mt-2">Get an immediate approximate commercial breakdown for planning tender values or client budgets.</p>
+                </div>
+
+                <div class="glass-panel p-6 sm:p-10 rounded-2xl border border-white/10 shadow-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                        
+                        <!-- Controls -->
+                        <div class="lg:col-span-7 space-y-6">
+                            
+                            <!-- Application Select -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Select Material Application</label>
+                                <select id="calcMaterial" class="w-full bg-stonecharcoal-950 border border-white/20 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-terracotta-500">
+                                    <option value="240" data-install="110" data-name="Pitched Black Granite Cladding">Natural Black Granite Cladding (₹240/sq.ft)</option>
+                                    <option value="85" data-install="75" data-name="Wirecut Terracotta Brick Tiles">Wirecut Terracotta Brick Tiles (₹85/sq.ft)</option>
+                                    <option value="125" data-install="95" data-name="Split-Face Sandstone Wall Tiles">Split-Face Sandstone Wall Cladding (₹125/sq.ft)</option>
+                                    <option value="160" data-install="65" data-name="Flamed Granite Outdoor Pavers">Flamed Granite Outdoor Pavers (₹160/sq.ft)</option>
+                                    <option value="320" data-install="140" data-name="Terracotta Dry-Clad Louvers">Terracotta Dry-Clad Architectural Louvers (₹320/sq.ft)</option>
+                                </select>
+                            </div>
+
+                            <!-- Area Slider & Input -->
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Estimated Surface Area (Sq.Ft)</label>
+                                    <span class="text-sm font-mono text-terracotta-500 font-bold" id="areaDisplay">1,400 Sq.Ft</span>
+                                </div>
+                                <input type="range" id="areaRange" min="100" max="10000" step="50" value="1400" class="w-full h-2 bg-stonecharcoal-800 rounded-lg appearance-none cursor-pointer accent-terracotta-500">
+                                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                                    <span>100 Sq.Ft</span>
+                                    <span>5,000 Sq.Ft</span>
+                                    <span>10,000+ Sq.Ft</span>
+                                </div>
+                            </div>
+
+                            <!-- Scope Toggle: Supply Only vs Turnkey -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Scope of Work</label>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <label class="cursor-pointer border border-white/10 rounded-lg p-3.5 bg-stonecharcoal-950 flex items-center justify-between has-[:checked]:border-terracotta-500 has-[:checked]:bg-terracotta-500/10">
+                                        <div class="flex items-center gap-3">
+                                            <input type="radio" name="scopeToggle" value="supply" class="accent-terracotta-500">
+                                            <div>
+                                                <p class="text-xs font-bold text-white">Supply Only</p>
+                                                <p class="text-[10px] text-slate-400">Material + Packing + Ex-factory</p>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label class="cursor-pointer border border-white/10 rounded-lg p-3.5 bg-stonecharcoal-950 flex items-center justify-between has-[:checked]:border-terracotta-500 has-[:checked]:bg-terracotta-500/10">
+                                        <div class="flex items-center gap-3">
+                                            <input type="radio" name="scopeToggle" value="turnkey" checked class="accent-terracotta-500">
+                                            <div>
+                                                <p class="text-xs font-bold text-white">Turnkey (Recommended)</p>
+                                                <p class="text-[10px] text-slate-400">Material + Installation + Site Ops</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Right Calculation Output -->
+                        <div class="lg:col-span-5 flex flex-col justify-between bg-stonecharcoal-950 rounded-xl p-6 border border-white/10">
+                            <div>
+                                <h4 class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-4 border-b border-white/10 pb-2">Estimated Budget Breakdown</h4>
+                                
+                                <div class="space-y-3 text-xs">
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Selected System:</span>
+                                        <span class="text-slate-200 font-medium text-right max-w-[160px] truncate" id="outSystemName">Pitched Black Granite</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Material Cost:</span>
+                                        <span class="text-slate-200 font-mono" id="outMaterialCost">₹ 3,36,000</span>
+                                    </div>
+                                    <div class="flex justify-between" id="rowInstallCost">
+                                        <span class="text-slate-400">Turnkey Installation & Labor:</span>
+                                        <span class="text-slate-200 font-mono" id="outInstallCost">₹ 1,54,000</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-slate-400">Estimated Wooden Crating:</span>
+                                        <span class="text-slate-200 font-mono" id="outPackingCost">₹ 12,000</span>
+                                    </div>
+                                    <div class="flex justify-between border-t border-white/10 pt-2 text-slate-300">
+                                        <span>Approximate Subtotal:</span>
+                                        <span class="font-mono" id="outSubtotal">₹ 5,02,000</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-6 border-t border-white/10 mt-6">
+                                <div class="flex justify-between items-baseline mb-1">
+                                    <span class="text-xs text-slate-400 uppercase tracking-widest">Estimated Value</span>
+                                    <span class="text-2xl font-bold text-white font-mono" id="outGrandTotal">₹ 5,02,000</span>
+                                </div>
+                                <p class="text-[10px] text-slate-500 mb-4">*Exclusive of GST & freight at actuals. Final rate subject to site elevation and location review.</p>
+                                <button onclick="triggerInquiryWithEstimate()" class="w-full accent-gradient text-white py-3 rounded text-xs uppercase tracking-wider font-semibold shadow hover:opacity-95">
+                                    Lock This Estimate & Consult
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 4-STEP EXECUTION PROCESS -->
+        <section id="process" class="py-24 bg-stonecharcoal-950 border-b border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-terracotta-500 tracking-widest uppercase">Field Craftsmanship</span>
+                    <h2 class="text-3xl font-bold text-white tracking-tight mt-1">The 4-Step Turnkey Execution Flow</h2>
+                    <p class="text-sm text-slate-400 mt-2">How we eliminate material damage, misalignments, and contractor delays.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                    
+                    <!-- Step 1 -->
+                    <div class="relative p-6 rounded-xl bg-stonecharcoal-900 border border-white/10 space-y-3">
+                        <div class="w-10 h-10 rounded-full bg-stonecharcoal-800 border border-terracotta-500/40 flex items-center justify-center font-mono font-bold text-terracotta-500">
+                            01
+                        </div>
+                        <h3 class="text-base font-bold text-white">Quarry & Factory Curation</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Our team visits the source factory, conducts dry-batch checks for color tone continuity, and verifies thickness tolerances before crate packing.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative p-6 rounded-xl bg-stonecharcoal-900 border border-white/10 space-y-3">
+                        <div class="w-10 h-10 rounded-full bg-stonecharcoal-800 border border-terracotta-500/40 flex items-center justify-center font-mono font-bold text-terracotta-500">
+                            02
+                        </div>
+                        <h3 class="text-base font-bold text-white">Substructure & Surface Prep</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Laser leveling the substrate masonry. We install stainless steel mechanical clamps, expansion slots, or structural framing needed for wind loads.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative p-6 rounded-xl bg-stonecharcoal-900 border border-white/10 space-y-3">
+                        <div class="w-10 h-10 rounded-full bg-stonecharcoal-800 border border-terracotta-500/40 flex items-center justify-center font-mono font-bold text-terracotta-500">
+                            03
+                        </div>
+                        <h3 class="text-base font-bold text-white">Precision Installation</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Laying by certified stone/brick masons. Consistent spacers, adhesive cavity elimination, and continuous vertical plumb line monitoring across the entire facade height.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative p-6 rounded-xl bg-stonecharcoal-900 border border-white/10 space-y-3">
+                        <div class="w-10 h-10 rounded-full bg-stonecharcoal-800 border border-terracotta-500/40 flex items-center justify-center font-mono font-bold text-terracotta-500">
+                            04
+                        </div>
+                        <h3 class="text-base font-bold text-white">Grouting, Sealant & Handover</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Application of UV-resistant silicone movement joints, hydrophobic water-repellent silane sealers to prevent efflorescence, and final joint punch listing.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT & ARCHITECT REQUEST FORM -->
+        <section id="contact" class="py-24 bg-stonecharcoal-950">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left: Company & Partnership Info -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs font-bold text-terracotta-500 tracking-widest uppercase">Direct Engagement</span>
+                        <h2 class="text-3xl font-bold text-white tracking-tight">Partner With Ladrillo on Your Next Elevation</h2>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Whether you need a full turnkey quotation, physical material sample boxes delivered to your architecture studio, or BOQ rate estimation, our technical sales team will assist you within 24 hours.
+                        </p>
+
+                        <div class="space-y-4 pt-4 border-t border-white/10 text-xs">
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded bg-stonecharcoal-900 border border-white/10 flex items-center justify-center text-terracotta-500 shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-white">Operations Base</p>
+                                    <p class="text-slate-400">Thiruvallam, Trivandrum P.O 695027</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded bg-stonecharcoal-900 border border-white/10 flex items-center justify-center text-terracotta-500 shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-white">Direct Technical Line</p>
+                                    <p class="text-slate-400">+91 97461 33395</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded bg-stonecharcoal-900 border border-white/10 flex items-center justify-center text-terracotta-500 shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-white">Commercial Inquiries</p>
+                                    <p class="text-slate-400">gm@derziegel.co.in</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div class="w-8 h-8 rounded bg-stonecharcoal-900 border border-white/10 flex items-center justify-center text-terracotta-500 shrink-0">
+                                    <i class="fa-solid fa-file-invoice"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-white">Tax & Registration Compliance</p>
+                                    <p class="text-slate-400">GSTIN: 32DJGPN0972J1Z3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="lg:col-span-7">
+                        <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-white/10">
+                            <h3 class="text-xl font-bold text-white mb-2">Request Technical Quotation / Sample</h3>
+                            <p class="text-xs text-slate-400 mb-6">Attach your approximate drawings or BOQ requirement.</p>
+
+                            <form id="quoteForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Your Name / Firm</label>
+                                        <input type="text" id="formName" required placeholder="Ar. Rajesh Menon / Menon Associates" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Phone Number</label>
+                                        <input type="tel" id="formPhone" required placeholder="+91 98400 00000" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Email Address</label>
+                                        <input type="email" id="formEmail" required placeholder="contact@studio.in" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Project Site City</label>
+                                        <input type="text" id="formLocation" required placeholder="Trivandrum / Kochi / Kollam" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Material of Interest</label>
+                                        <select id="formMaterial" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                            <option>Natural Stone Cladding (Black Granite / Sandstone)</option>
+                                            <option>Wirecut Terracotta Brick Tiles</option>
+                                            <option>Dry-Clad Terracotta Facade Louvers</option>
+                                            <option>Stone Pavers & Outdoor Landscaping</option>
+                                            <option>Full Turnkey Package (Supply + Installation)</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Estimated Area (Sq.Ft)</label>
+                                        <input type="number" id="formArea" placeholder="e.g. 1500" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Project Specifics or Elevation Details</label>
+                                    <textarea id="formNotes" rows="3" placeholder="Mention elevation height, surface condition, or request a sample box to be couriered..." class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500"></textarea>
+                                </div>
+
+                                <div id="formSuccessMessage" class="hidden p-3 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs">
+                                    <i class="fa-solid fa-check-circle mr-1"></i> Inquiry recorded! Our technical estimation team will reach out with BOQ parameters within 24 hours.
+                                </div>
+
+                                <button type="submit" class="w-full accent-gradient text-white py-3.5 rounded text-xs uppercase tracking-wider font-semibold shadow-lg shadow-terracotta-500/20 hover:opacity-95 transition-all">
+                                    Submit Commercial Request
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stonecharcoal-950 border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <div class="md:col-span-4 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="logo.jpeg" alt="Ladrillo logo" class="w-8 h-8 rounded object-cover">
+                        <span class="font-display font-bold text-lg tracking-wider text-white">LADRILLO</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed pr-6">
+                        Ladrillo Structural Supply is an architectural supply and precision turnkey execution partner. We manage quarry-direct procurement, fumigated crating, logistical movement, and on-site facade engineering.
+                    </p>
+                    <div class="flex gap-4 text-slate-400 text-sm pt-2">
+                        <a href="#" class="hover:text-terracotta-500 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-terracotta-500 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-terracotta-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <p class="font-semibold text-white uppercase tracking-wider text-[11px]">Material Specialties</p>
+                    <ul class="space-y-2">
+                        <li><a href="#materials" class="hover:text-white transition-colors">Surface Pitched Black Granite</a></li>
+                        <li><a href="#materials" class="hover:text-white transition-colors">Wirecut Terracotta Brick Tiles</a></li>
+                        <li><a href="#materials" class="hover:text-white transition-colors">Split-Face Natural Sandstone</a></li>
+                        <li><a href="#materials" class="hover:text-white transition-colors">Dry-Clad Louvers & Substructures</a></li>
+                        <li><a href="#materials" class="hover:text-white transition-colors">Hydrophobic Stone Sealants</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3 space-y-3">
+                    <p class="font-semibold text-white uppercase tracking-wider text-[11px]">Turnkey Solutions</p>
+                    <ul class="space-y-2">
+                        <li><a href="#process" class="hover:text-white transition-colors">Mechanical Stainless Pin Anchoring</a></li>
+                        <li><a href="#process" class="hover:text-white transition-colors">Architectural Mockup Displays</a></li>
+                        <li><a href="#process" class="hover:text-white transition-colors">Moisture Testing & Dry Lays</a></li>
+                        <li><a href="#process" class="hover:text-white transition-colors">Transit Insurance Handling</a></li>
+                        <li><a href="#calculator" class="hover:text-white transition-colors">BOQ Tender Estimation</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-2 space-y-3">
+                    <p class="font-semibold text-white uppercase tracking-wider text-[11px]">Business Verification</p>
+                    <div class="bg-stonecharcoal-900 p-3 rounded border border-white/5 space-y-1 font-mono text-[11px]">
+                        <p class="text-slate-300">GST: 32DJGPN0972J1Z3</p>
+                        <p class="text-slate-400">State: Kerala (32)</p>
+                        <p class="text-emerald-400 mt-2 flex items-center gap-1"><i class="fa-solid fa-circle-check text-[10px]"></i> Active Entity</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 text-[11px]">
+                <p>&copy; 2026 Ladrillo Structural Supply. All rights reserved.</p>
+                <p class="text-slate-400">Trivandrum</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('hidden');
+        });
+
+        // Filter Product Cards
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-terracotta-500', 'text-white', 'active');
+                    b.classList.add('bg-stonecharcoal-900', 'text-slate-300');
+                });
+                btn.classList.add('bg-terracotta-500', 'text-white', 'active');
+                btn.classList.remove('bg-stonecharcoal-900', 'text-slate-300');
+
+                const filter = btn.getAttribute('data-filter');
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(filter)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Dynamic Cost Calculator Engine
+        const calcMaterial = document.getElementById('calcMaterial');
+        const areaRange = document.getElementById('areaRange');
+        const areaDisplay = document.getElementById('areaDisplay');
+        const scopeRadios = document.querySelectorAll('input[name="scopeToggle"]');
+        
+        const outSystemName = document.getElementById('outSystemName');
+        const outMaterialCost = document.getElementById('outMaterialCost');
+        const outInstallCost = document.getElementById('outInstallCost');
+        const outPackingCost = document.getElementById('outPackingCost');
+        const outSubtotal = document.getElementById('outSubtotal');
+        const outGrandTotal = document.getElementById('outGrandTotal');
+        const rowInstallCost = document.getElementById('rowInstallCost');
+
+        function formatINR(number) {
+            return '₹ ' + number.toLocaleString('en-IN', { maximumFractionDigits: 0 });
+        }
+
+        function calculateEstimate() {
+            const selectedOption = calcMaterial.options[calcMaterial.selectedIndex];
+            const matRate = parseFloat(calcMaterial.value);
+            const installRate = parseFloat(selectedOption.getAttribute('data-install'));
+            const systemName = selectedOption.getAttribute('data-name');
+            const area = parseInt(areaRange.value, 10);
+            
+            let isTurnkey = true;
+            scopeRadios.forEach(r => {
+                if (r.checked && r.value === 'supply') isTurnkey = false;
+            });
+
+            areaDisplay.textContent = area.toLocaleString('en-IN') + ' Sq.Ft';
+            outSystemName.textContent = systemName;
+
+            const materialTotal = matRate * area;
+            const packingTotal = Math.max(3500, Math.round(area * 7.5)); // Crate & fumigation approximation
+            const installTotal = isTurnkey ? (installRate * area) : 0;
+
+            if (isTurnkey) {
+                rowInstallCost.style.display = 'flex';
+            } else {
+                rowInstallCost.style.display = 'none';
+            }
+
+            const grandTotal = materialTotal + packingTotal + installTotal;
+
+            outMaterialCost.textContent = formatINR(materialTotal);
+            outInstallCost.textContent = formatINR(installTotal);
+            outPackingCost.textContent = formatINR(packingTotal);
+            outSubtotal.textContent = formatINR(grandTotal);
+            outGrandTotal.textContent = formatINR(grandTotal);
+        }
+
+        calcMaterial.addEventListener('change', calculateEstimate);
+        areaRange.addEventListener('input', calculateEstimate);
+        scopeRadios.forEach(r => r.addEventListener('change', calculateEstimate));
+
+        // Prefill from Catalog
+        window.prefillEstimate = function(name, rate) {
+            for (let i = 0; i < calcMaterial.options.length; i++) {
+                if (parseFloat(calcMaterial.options[i].value) === rate) {
+                    calcMaterial.selectedIndex = i;
+                    break;
+                }
+            }
+            calculateEstimate();
+            document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // Scroll to Contact with values pre-filled
+        window.triggerInquiryWithEstimate = function() {
+            const selectedOption = calcMaterial.options[calcMaterial.selectedIndex];
+            const area = areaRange.value;
+            const isTurnkey = document.querySelector('input[name="scopeToggle"]:checked').value === 'turnkey';
+            
+            document.getElementById('formArea').value = area;
+            document.getElementById('formNotes').value = `Auto-Quote Ref: Interested in ${selectedOption.getAttribute('data-name')} for approx ${area} sq.ft (${isTurnkey ? 'Turnkey Supply + Execution' : 'Material Supply Only'}). Estimated budget: ${outGrandTotal.textContent}`;
+            
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // Form Submission feedback
+        window.handleFormSubmit = function(e) {
+            e.preventDefault();
+            const successDiv = document.getElementById('formSuccessMessage');
+            successDiv.classList.remove('hidden');
+            document.getElementById('quoteForm').reset();
+            setTimeout(() => {
+                successDiv.classList.add('hidden');
+            }, 7000);
+        };
+
+        // Initial compute
+        calculateEstimate();
+    </script>
+</body>
+</html>
