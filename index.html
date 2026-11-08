@@ -703,33 +703,34 @@
                             <h3 class="text-xl font-bold text-white mb-2">Request Technical Quotation / Sample</h3>
                             <p class="text-xs text-slate-400 mb-6">Attach your approximate drawings or BOQ requirement.</p>
 
-                            <form id="quoteForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <input type="hidden" name="access_key" value="5c3990e9-2b89-4210-ba03-27c90c5318ba">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Your Name / Firm</label>
-                                        <input type="text" id="formName" required placeholder="Ar. Rajesh Menon / Menon Associates" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                        <input type="text" id="formName" name="name" required placeholder="Ar. Rajesh Menon / Menon Associates" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
                                     </div>
                                     <div>
                                         <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Phone Number</label>
-                                        <input type="tel" id="formPhone" required placeholder="+91 98400 00000" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                        <input type="tel" id="formPhone" name="phone" required placeholder="+91 98400 00000" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Email Address</label>
-                                        <input type="email" id="formEmail" required placeholder="contact@studio.in" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                        <input type="email" id="formEmail" name="email" required placeholder="contact@studio.in" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
                                     </div>
                                     <div>
                                         <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Project Site City</label>
-                                        <input type="text" id="formLocation" required placeholder="Trivandrum / Kochi / Kollam" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                        <input type="text" id="formLocation" name="project_city" required placeholder="Trivandrum / Kochi / Kollam" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Material of Interest</label>
-                                        <select id="formMaterial" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                        <select id="formMaterial" name="material" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
                                             <option>Natural Stone Cladding (Black Granite / Sandstone)</option>
                                             <option>Wirecut Terracotta Brick Tiles</option>
                                             <option>Dry-Clad Terracotta Facade Louvers</option>
@@ -739,18 +740,19 @@
                                     </div>
                                     <div>
                                         <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Estimated Area (Sq.Ft)</label>
-                                        <input type="number" id="formArea" placeholder="e.g. 1500" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
+                                        <input type="number" id="formArea" name="estimated_area_sq_ft" placeholder="e.g. 1500" class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500">
                                     </div>
                                 </div>
 
                                 <div>
                                     <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Project Specifics or Elevation Details</label>
-                                    <textarea id="formNotes" rows="3" placeholder="Mention elevation height, surface condition, or request a sample box to be couriered..." class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500"></textarea>
+                                    <textarea id="formNotes" name="message" rows="3" placeholder="Mention elevation height, surface condition, or request a sample box to be couriered..." class="w-full bg-stonecharcoal-950 border border-white/15 rounded p-3 text-xs text-white focus:outline-none focus:border-terracotta-500"></textarea>
                                 </div>
 
                                 <div id="formSuccessMessage" class="hidden p-3 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs">
                                     <i class="fa-solid fa-check-circle mr-1"></i> Inquiry recorded! Our technical estimation team will reach out with BOQ parameters within 24 hours.
                                 </div>
+                                <div id="formErrorMessage" role="alert" class="hidden p-3 rounded bg-red-500/10 border border-red-500/30 text-red-400 text-xs"></div>
 
                                 <button type="submit" class="w-full accent-gradient text-white py-3.5 rounded text-xs uppercase tracking-wider font-semibold shadow-lg shadow-terracotta-500/20 hover:opacity-95 transition-all">
                                     Submit Commercial Request
@@ -939,14 +941,36 @@
         };
 
         // Form Submission feedback
-        window.handleFormSubmit = function(e) {
+        window.handleFormSubmit = async function(e) {
             e.preventDefault();
+            const form = document.getElementById('quoteForm');
             const successDiv = document.getElementById('formSuccessMessage');
-            successDiv.classList.remove('hidden');
-            document.getElementById('quoteForm').reset();
-            setTimeout(() => {
-                successDiv.classList.add('hidden');
-            }, 7000);
+            const errorDiv = document.getElementById('formErrorMessage');
+            const submitButton = form.querySelector('button[type="submit"]');
+            successDiv.classList.add('hidden');
+            errorDiv.classList.add('hidden');
+            submitButton.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form)
+                });
+                const result = await response.json();
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.message || 'The form could not be submitted. Please try again.');
+                }
+
+                form.reset();
+                successDiv.classList.remove('hidden');
+                setTimeout(() => successDiv.classList.add('hidden'), 7000);
+            } catch (error) {
+                errorDiv.textContent = error.message || 'Unable to send your inquiry. Please try again.';
+                errorDiv.classList.remove('hidden');
+            } finally {
+                submitButton.disabled = false;
+            }
         };
 
         // Initial compute
